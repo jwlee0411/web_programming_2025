@@ -1,18 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: leejo
-  Date: 2025-09-29
-  Time: 오전 9:16
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String savedId = ""; // 쿠키 값 저장용 변수
+
+    Cookie[] cookies = request.getCookies();
+    if(cookies != null) {
+        for(Cookie c : cookies) {
+            if("id_remember".equals(c.getName())) {
+                savedId = c.getValue(); // 쿠키 값 가져오기
+            }
+        }
+    }
+%>
 <html>
 <head>
     <title>Title</title>
     <style>
         label{
             display: block;
-
             padding: 10px;
         }
         label span{
@@ -30,15 +34,15 @@
     </style>
 </head>
 <body>
-<form action="c5_login_ok.jsp" method="post">
+<form action="c5_confirm.jsp" method="post">
     <label>
-        <span>E-Mail</span> : <input type="email" name="email" placeholder="aaa@bbb.com"/><br/>
+        <span>ID</span> :
+        <input type="text" name="id" placeholder="id" value="<%= savedId %>"/>
+        <input type="checkbox" name="checkbox" value="1" <%= !"".equals(savedId) ? "checked" : "" %> >ID기억하기<br/>
     </label>
     <label>
-        <span>Password</span> : <input type="password" name="pw" placeholder="password"/><br/>
-
-
-
+        <span>Password</span> :
+        <input type="password" name="pw" placeholder="password"/><br/>
     </label>
 
     <input type="submit" value="Login"/>

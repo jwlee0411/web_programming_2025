@@ -30,9 +30,9 @@
     </style>
 </head>
 <body>
-<form action="c5_login_ok.jsp" method="post">
+<form action="c5_confirm.jsp" method="post">
     <label>
-        <span>E-Mail</span> : <input type="email" name="email" placeholder="aaa@bbb.com"/><br/>
+        <span>ID</span> : <input type="text" name="id" placeholder="id"/><br/>
     </label>
     <label>
         <span>Password</span> : <input type="password" name="pw" placeholder="password"/><br/>
