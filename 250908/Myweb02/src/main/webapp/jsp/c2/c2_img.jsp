@@ -12,7 +12,7 @@
 </head>
 <body>
 <a href="https://www.youtube.com/watch?v=ZE_V0g9q4g0">
-    <img src="../images/1.jpg" width="500" height="500" alt="숭실대가 날아가 버렸으면 좋겠어">
+    <img src="../../images/1.jpg" width="500" height="500" alt="숭실대가 날아가 버렸으면 좋겠어">
 </a>
 </body>
 </html>
