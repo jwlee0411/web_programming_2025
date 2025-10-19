@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .card-container{
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+
+
+
+            flex-wrap: wrap;
+            gap: 20px;
+            border: 2px solid #333;
+            padding: 20px;
+            background-color: #fafafa;
+
+        }
+
+        .card{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .card:nth-child(2){
+            background-color: aqua;
+            flex-grow: 2;
+        }
+
+
+    </style>
+</head>
+<body class="card-container">
+    <div class="card"> card1</div>
+    <div class="card"> card2</div>
+    <div class="card"> card3</div>
+</body>
+</html>

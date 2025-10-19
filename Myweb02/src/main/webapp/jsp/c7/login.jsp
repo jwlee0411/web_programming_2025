@@ -21,8 +21,6 @@
         table, th, td, tr{
             border: 1px solid orange;
             text-align: center;
-
-
         }
 
         table{
